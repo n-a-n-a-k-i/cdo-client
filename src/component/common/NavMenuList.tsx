@@ -1,10 +1,22 @@
 import React, {FC} from 'react';
-import {Avatar, Box, Divider, List, ListItemAvatar, ListItemIcon, ListItemText} from "@mui/material";
+import {
+    Avatar,
+    Box,
+    Divider,
+    IconButton,
+    List,
+    ListItem,
+    ListItemAvatar, ListItemButton,
+    ListItemIcon,
+    ListItemText
+} from "@mui/material";
 import TodayIcon from "@mui/icons-material/Today";
 import MapIcon from "@mui/icons-material/Map";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import SensorsIcon from "@mui/icons-material/Sensors";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import StorageIcon from '@mui/icons-material/Storage';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import {RouteType} from "../App";
 import ListItemLink from "./ListItemLink";
 
@@ -83,6 +95,36 @@ const NavMenuList: FC<NavMenuListProps> = ({selected}) => {
                     </ListItemIcon>
                     <ListItemText primary={'Устройства'}/>
                 </ListItemLink>
+
+            </List>
+
+            <Divider/>
+
+            <List>
+
+                <ListItem
+                    disablePadding
+                    secondaryAction={
+                        <IconButton
+                            edge="end"
+                            component="a"
+                            href="https://strapi.cdo.honeycat.ru/dashboard"
+                            target="_blank"
+                        >
+                            <OpenInNewIcon/>
+                        </IconButton>
+                    }
+                >
+                    <ListItemButton
+                        component="a"
+                        href="https://strapi.cdo.honeycat.ru/dashboard"
+                    >
+                        <ListItemIcon>
+                            <StorageIcon/>
+                        </ListItemIcon>
+                        <ListItemText primary={'Данные'}/>
+                    </ListItemButton>
+                </ListItem>
 
             </List>
 
