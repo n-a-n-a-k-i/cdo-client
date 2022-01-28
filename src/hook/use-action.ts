@@ -1,9 +1,11 @@
 import {useDispatch} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as AccountAction from '../store/account/account.action'
+import * as ObjectAction from '../store/object/object.action'
 
 const action = {
-    ...AccountAction
+    ...AccountAction,
+    ...ObjectAction
 }
 
 export const useAction = () => {
